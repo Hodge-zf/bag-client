@@ -21,7 +21,10 @@ public class Hydra {
         startingSize = getInt("   It should be an integer value greater than or equal to 1.");
 
 
-        // ADD CODE HERE TO CREATE AND INITIALIZE THE TWO BAGS
+        headBag = new ArrayBag<Integer>();
+        headBag.add(startingSize);
+
+        workBag = new ArrayBag<String>();
 
         System.out.println("The head bag is " + headBag);
 
