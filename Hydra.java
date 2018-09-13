@@ -32,6 +32,10 @@ public class Hydra {
 
         // ADD CODE HERE TO DO THE SIMULATION
 
+        simulationStep(headBag, workBag);
+        
+        System.out.println("The head bag is now " + headBag);
+
         if (noOverflow) {
             System.out.println("The number of chops required is " + workBag.getCurrentSize());
         } else {
@@ -51,9 +55,33 @@ public class Hydra {
      */
     public static boolean simulationStep(BagInterface<Integer> heads, BagInterface<String> work) {
 
-        // COMPLETE THIS METHOD
         boolean result = true;
 
+        boolean success = false;
+
+        //remove one unspecified head from input heads
+        int n = heads.remove();
+
+        //take removed head, decrement by 1 and add two times
+
+        if (n > 1){
+            success = heads.add(n - 1);
+            if (!success) {
+                result = false;
+            }
+
+            success = heads.add(n - 1);
+            if (!success) {
+                result = false;
+            }
+        }
+
+        success = work.add("chop");
+        {
+            if (!success){
+                result = false;
+            }
+        }
 
         return result;
     }
