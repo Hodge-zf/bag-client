@@ -30,11 +30,13 @@ public class Hydra {
 
         boolean noOverflow = true;
 
-        // ADD CODE HERE TO DO THE SIMULATION
+        while (headBag.getCurrentSize() > 0) {
 
-        simulationStep(headBag, workBag);
-        
-        System.out.println("The head bag is now " + headBag);
+            simulationStep(headBag, workBag);
+
+            System.out.println("The head bag is now " + headBag);
+        }
+
 
         if (noOverflow) {
             System.out.println("The number of chops required is " + workBag.getCurrentSize());
