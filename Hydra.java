@@ -30,9 +30,9 @@ public class Hydra {
 
         boolean noOverflow = true;
 
-        while (headBag.getCurrentSize() > 0) {
+        while (headBag.getCurrentSize() > 0 & noOverflow) {
 
-            simulationStep(headBag, workBag);
+            noOverflow = simulationStep(headBag, workBag);
 
             System.out.println("The head bag is now " + headBag);
         }
