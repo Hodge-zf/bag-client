@@ -25,8 +25,8 @@ public class LongestCommonSubsequence {
         String second = input.next();
 
 
-
-        // ADD CODE HERE TO CREATE THE BAG WITH THE INITIAL STRING
+        toCheckContainer = new ArrayBag<String>();
+        toCheckContainer.add(first);
 
         System.out.println("The strings to check are: " + toCheckContainer);
         String bestSubsequence = new String("");
